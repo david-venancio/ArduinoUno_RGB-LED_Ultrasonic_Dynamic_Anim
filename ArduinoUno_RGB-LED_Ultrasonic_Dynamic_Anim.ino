@@ -6,8 +6,8 @@
 #include <RGB_LED.h>
 
 #define LOG_TIMER_DELAY 100
-#define WHAT_IS_CLOSE   10  //closer than that = max speed anim
-#define WHAT_IS_FAR     50  //further than that = slowest speed anim
+#define WHAT_IS_CLOSE   10  //closer than that = slowest speed anim
+#define WHAT_IS_FAR     50  //further than that = max speed anim
 
 RGB_LED LED(9,10,11);
 unsigned int speed = 5000;
