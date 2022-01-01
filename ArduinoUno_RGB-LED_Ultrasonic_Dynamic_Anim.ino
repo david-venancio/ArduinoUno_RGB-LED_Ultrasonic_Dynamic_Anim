@@ -25,8 +25,8 @@ void setup()
 
   Serial.begin(250000);
   Serial.println("----------------------------------------");
-  Serial.println("- RGB-LED ANIMATION from distance");
-  Serial.println("  read from HR-SC04 Ultrasonic Ranging Module");
+  Serial.println("- RGB-LED Ultrasonic Dynamic Animation");
+  Serial.println("----------------------------------------  ");
   Serial.println("- Meta_4 2022.01"); 
   Serial.println("- LED PWM pins R:9 G:10 B:11");
   Serial.println("- HR-SC04 pins Trig:4 Echo:3");
@@ -36,7 +36,7 @@ void setup()
   Serial.print("- messages sent every ");
   Serial.print(LOG_TIMER_DELAY);
   Serial.println(" loops :");
-  Serial.println("- distance in cm");
+  Serial.println("- distance in cm / anim speed");
   Serial.println("----------------------------------------");
 }
 
@@ -49,7 +49,7 @@ void loop()
     log_timer_k=0;
     Serial.print(last_range);
     //using the the log_timer var to also time the sensor read = realtime answer+log.
-    //wanted : close = fast anim, distant or nothing = slow anim
+    //wanted : close = slow anim, distant or nothing = fast anim
     if(last_range < WHAT_IS_CLOSE){
       speed = 20000;
     }
@@ -59,7 +59,7 @@ void loop()
     if(last_range > WHAT_IS_CLOSE && last_range < WHAT_IS_FAR){
       speed = map(last_range, WHAT_IS_CLOSE, WHAT_IS_FAR, 20000, 100  );
     }
-    Serial.print(" anim speed:");
+    Serial.print(" / ");
     Serial.println(speed);
     LED.setSpeed(speed);
     LED.delay(10);
