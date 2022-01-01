@@ -6,5 +6,6 @@ by Meta_4 2022.01 / meta_4@massmulti.org
 - HR-SC04 pins Trig:4 Echo:3 (1 to 50cm)
 - Hardware: Arduino UNO and compatibles
 
+
 close = slowest speed anim
 far = max speed anim
