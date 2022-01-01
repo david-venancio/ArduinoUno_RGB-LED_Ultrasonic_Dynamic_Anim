@@ -7,5 +7,4 @@ by Meta_4 2022.01 / meta_4@massmulti.org
 - Hardware: Arduino UNO and compatibles
 
 
-close = slowest speed anim
-far = max speed anim
+close = slowest speed anim, far = max speed anim
