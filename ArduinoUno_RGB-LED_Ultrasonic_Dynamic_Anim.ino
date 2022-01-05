@@ -42,11 +42,11 @@ void setup()
 
 void loop() 
 {
-  last_range = ultrasonic.Ranging(CM);
   if(log_timer_k<LOG_TIMER_DELAY){
     log_timer_k++;
   }else{
     log_timer_k=0;
+    last_range = ultrasonic.Ranging(CM);
     Serial.print(last_range);
     //using the the log_timer var to also time the sensor read = realtime answer+log.
     //wanted : close = slow anim, distant or nothing = fast anim
